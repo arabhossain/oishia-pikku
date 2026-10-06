@@ -1,0 +1,1 @@
+When using infrared control, please ensure that the ESP32 has enough available GPIO pins.

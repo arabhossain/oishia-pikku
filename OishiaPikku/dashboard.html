@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fbf6ef">
+<title>Oishia · A little closer</title>
+<style>
+:root{color-scheme:light;--ink:#34372f;--muted:#72776a;--paper:#fbf6ef;--card:#fffdf9;--line:#e6e3d7;--peach:#f7c9b3;--green:#e3ebd8;--accent:#526748}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer;min-height:46px;border:1px solid var(--line);border-radius:14px;padding:11px 18px;background:var(--card);color:var(--ink);font-weight:650;transition:transform .15s,background .15s}button:hover{background:#f2eee5;transform:translateY(-1px)}button:disabled{opacity:.5;cursor:wait;transform:none}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #7d9570;outline-offset:3px}input,select{width:100%;min-height:46px;border:1px solid #cccfc2;border-radius:12px;padding:11px 13px;background:white;color:var(--ink)}label{display:block;font-size:13px;font-weight:650;margin:14px 0 6px}.primary{background:var(--peach);border-color:var(--peach)}.primary:hover{background:#f3bfa4}.secondary{background:var(--green);border-color:var(--green)}a{color:var(--accent);overflow-wrap:anywhere}[hidden]{display:none!important}.shell{max-width:1080px;margin:auto;padding:28px 28px 40px}header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:30px}.brand{font-size:32px;font-weight:800;letter-spacing:-2px;text-decoration:none;color:var(--ink)}.brand span{display:inline-block;width:9px;height:9px;border-radius:50%;background:#eeb69d;margin-left:5px}.status{font-size:12px;padding:7px 12px;border-radius:30px;background:var(--green);display:flex;gap:7px;align-items:center}.status:before{content:"";width:6px;height:6px;background:#69805a;border-radius:50%}.status.offline{background:#eee5d7}.status.offline:before{background:#a1805c}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:700;color:var(--muted)}h1{font-size:clamp(28px,4vw,43px);line-height:1.14;letter-spacing:-1.4px;margin:12px 0}h2{font-size:19px;letter-spacing:-.4px;margin:0 0 8px}p{margin:8px 0}.muted,small{color:var(--muted)}small{font-size:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:25px}.welcome{max-width:470px;margin:50px auto}.welcome .mini{font-size:30px;color:#8c654e}.welcome button{width:100%;margin-top:18px}.help{border-top:1px solid var(--line);margin-top:23px;padding-top:16px}.grid{display:grid;grid-template-columns:1.12fr 1fr;gap:22px}.hero{background:#eeeede;position:relative;overflow:hidden;min-height:445px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px}.hero .eyebrow{align-self:flex-start}.pet-shell{width:256px;max-width:100%;margin:36px 0 28px;padding:8px;background:#111;border-radius:16px;box-shadow:0 18px 35px -20px #6b6c58}.oled-face{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.bubble{font-size:20px;font-weight:650;min-height:32px;max-width:100%;overflow-wrap:anywhere}.mood{font-size:12px;text-transform:capitalize;margin-top:5px;color:#69735c}.friendship{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:23px;font-size:12px;color:#526148}.friendship span:first-child{background:#dce4ce;border-radius:20px;padding:5px 10px}.stack{display:flex;flex-direction:column;gap:20px}.intro{margin-bottom:25px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.actions .wide{grid-column:1/-1}.action-icon{display:block;font-size:22px;font-weight:400;margin-bottom:2px}.message-row{display:flex;gap:8px}.message-row input{min-width:0}.message-row button{flex-shrink:0}.hint-row{display:flex;justify-content:space-between;gap:10px;margin-top:5px}.notice{min-height:24px;color:#526748;font-size:13px;margin-top:12px}.notice.error{color:#a13931}.section-title{display:flex;align-items:center;justify-content:space-between;margin:32px 0 13px}.section-title h2{margin:0}.readings{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.reading{padding:20px}.reading .value{font-size:26px;letter-spacing:-.8px;margin:12px 0 3px}.reading .caption{font-size:12px;color:var(--muted)}.network{margin-top:22px}summary{cursor:pointer;font-size:16px;font-weight:650;min-height:28px}.network-content{padding-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:32px}.network-status{margin-top:15px}.network form button{margin-top:15px}.network .tip{background:#f3f2e8;border-radius:14px;padding:13px;margin-top:17px;font-size:13px}.network code{font-size:13px}.footer{display:flex;justify-content:space-between;gap:15px;margin-top:24px;font-size:12px;color:var(--muted)}.footer button{min-height:32px;padding:3px 10px;font-size:12px;background:transparent;border:0}.connection-warning{padding:12px 16px;background:#f8e4d3;border-radius:14px;margin-bottom:16px;font-size:13px}.heart{color:#a7644a}progress{width:70px;height:6px;accent-color:#718560;vertical-align:middle}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}@media(max-width:700px){.shell{padding:20px 16px}header{margin-bottom:22px}.grid{grid-template-columns:1fr}.hero{min-height:360px}.pet-shell{width:256px;max-width:100%;margin:36px 0 28px;padding:8px;background:#111;border-radius:16px;box-shadow:0 18px 35px -20px #6b6c58}.oled-face{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.bubble{font-size:19px}}
+.transport-choice{display:flex;gap:18px;margin:18px 0}.transport-choice label{display:flex;gap:6px;align-items:center;margin:0}.transport-choice input{width:16px;min-height:16px}.network-tools{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.network-tools button{font-size:13px}.network-list{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.network-list button{font-size:12px;padding:6px 10px}.section-title{gap:12px;flex-wrap:wrap}.danger{color:#963c31}.connection-warning button{margin-top:8px}.brand{letter-spacing:-1.6px}@media(max-width:420px){.status{font-size:10px}.brand{font-size:29px}}
+.routine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.routine{border:1px solid var(--line);border-radius:16px;padding:14px}.routine h3{margin:0;font-size:15px}.routine label{margin-top:9px}.weekday-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.history-bars{display:flex;align-items:end;gap:2px;height:100px;margin:16px 0;border-bottom:1px solid var(--line)}.history-bars i{display:block;flex:1;min-width:2px;background:#9bae8d;border-radius:3px 3px 0 0}.event-list{margin:10px 0;padding-left:20px}.event-list li{margin:6px 0}.health-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.health-item{background:#f3f2e8;border-radius:12px;padding:12px}.health-item strong{display:block}@media(max-width:700px){.routine-grid,.health-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><a class="brand" href="/" aria-label="Oishia home">oishia<span></span></a><div id="connectionBadge" class="status offline" role="status">Your little companion</div></header>
+<section id="loginPanel" class="card welcome">
+  <div class="mini" aria-hidden="true">♡</div><div class="eyebrow">A little closer</div>
+  <h1>Hello, friend.</h1><p class="muted">Oishia is ready for a little company. Enter the four-digit PIN from Oishia’s screen to say hello.</p>
+  <form id="loginForm"><div class="transport-choice" role="group" aria-label="Connection type"><label><input type="radio" name="transport" value="wifi" checked> Wi-Fi</label><label><input type="radio" name="transport" value="ble"> Bluetooth</label></div><p id="transportHint" class="muted"></p><label for="accessKey">Oishia’s four-digit PIN</label><input id="accessKey" type="password" autocomplete="current-password" inputmode="numeric" pattern="[0-9]{4}" minlength="4" maxlength="4" required placeholder="4 digits" autocapitalize="none" spellcheck="false"><button class="primary" type="submit">Connect to Oishia</button></form>
+  <p id="loginNotice" class="notice" role="status" aria-live="polite"></p>
+  <div class="help"><small>Hold Oishia’s button for 5 seconds to see the PIN and Wi-Fi password. Login is available for five minutes after power-on or a button hold. For first-time setup, join the <strong>OishiaPikku</strong> Wi-Fi network using the separate Wi-Fi password shown on its screen, then open <strong>http://192.168.4.1</strong>.</small></div>
+</section>
+<main id="dashboard" hidden>
+  <div id="connectionWarning" class="connection-warning" role="status" hidden><span id="connectionWarningText">Connection paused. <span data-pet-name>Oishia</span> is still doing its thing. Trying again…</span><button id="reconnectBle" hidden>Reconnect Bluetooth</button></div>
+  <div class="intro"><div class="eyebrow">Your small, happy corner</div><h1>A little love goes a long way.</h1><p class="muted">Check in, send a smile, or just be here together.</p></div>
+  <div class="grid">
+    <section class="card hero" aria-label="Companion mood"><div class="eyebrow">Here with you</div>
+      <div id="petIllustration" class="pet-shell"><canvas id="petFace" class="oled-face" width="128" height="64" role="img" aria-label="Oishia face"></canvas></div>
+      <div id="petMessage" class="bubble">Getting to know <span data-pet-name>Oishia</span>…</div><div id="petMood" class="mood">Waiting for an update</div>
+      <div class="friendship"><span id="friendship">Friendship —</span><span><span id="happiness">—</span> happy <progress id="happinessBar" max="100" value="0" aria-label="Happiness"></progress></span></div>
+    </section>
+    <div class="stack"><section class="card"><h2>Make <span data-pet-name>Oishia</span>’s day</h2><p class="muted">Little gestures. Big feelings.</p>
+      <div class="actions"><button class="primary wide" data-action="love"><span class="action-icon" aria-hidden="true">♡</span>Send some love</button><button data-action="sleep"><span class="action-icon" aria-hidden="true">☾</span>Cozy sleep</button><button data-action="wake"><span class="action-icon" aria-hidden="true">☀</span>Wake up</button></div>
+      <p id="actionNotice" class="notice" role="status" aria-live="polite"></p>
+      <button id="muteButton" aria-pressed="false" data-action="mute">Sound on · Mute</button>
+    </section>
+    <section class="card"><h2>A tiny note</h2><form id="messageForm"><label for="message">Something sweet for <span data-pet-name>Oishia</span>’s screen</label><div class="message-row"><input id="message" maxlength="21" required placeholder="You make me smile" autocomplete="off"><button type="submit" class="secondary">Send</button></div><div class="hint-row"><small>English letters, numbers &amp; punctuation.</small><small id="messageCount">0 / 21</small></div></form></section></div>
+  </div>
+  <div class="section-title"><h2><span data-pet-name>Oishia</span>’s little world</h2><small id="readingStatus">Waiting for readings</small></div>
+  <section class="readings" aria-label="Live sensor readings"><div class="card reading"><small>Temperature</small><div id="temperature" class="value">—</div><div class="caption">Around <span data-pet-name>Oishia</span></div></div><div class="card reading"><small>Humidity</small><div id="humidity" class="value">—</div><div class="caption">In the air</div></div><div class="card reading"><small>Room light</small><div id="light" class="value">—</div><div id="lightDetail" class="caption">Waiting for sensor</div></div><div class="card reading"><small>Motion</small><div id="motion" class="value">—</div><div class="caption">PIR motion sensor</div></div></section>
+  <details id="wifiDetails" class="card network"><summary>Make <span data-pet-name>Oishia</span> feel at home · Wi-Fi</summary><div class="network-content"><div><h2>A place to connect</h2><p class="muted">Connect <span data-pet-name>Oishia</span> to your home’s 2.4 GHz Wi-Fi, then visit from a phone or computer on the same network.</p><p id="wifiStatus" class="network-status"></p><small id="bluetoothStatus"></small><div class="network-tools"><button id="scanButton" type="button">Find networks</button><button id="forgetButton" class="danger" type="button">Forget saved Wi-Fi</button></div><div id="networkList" class="network-list" aria-label="Nearby networks"></div><p id="networkNotice" class="notice" role="status" aria-live="polite"></p><div id="forgetConfirmation" hidden><p>Forget the saved Wi-Fi network? <span data-pet-name>Oishia</span> will return to its setup hotspot. Friendship memory stays.</p><button id="confirmForget" class="danger" type="button">Yes, forget Wi-Fi</button> <button id="cancelForget" type="button">Keep network</button></div><p id="wifiResult" class="notice" role="status" aria-live="polite"></p><p id="dashboardAddress" hidden>Home dashboard: <a id="homeLink"></a></p><div class="tip">No router nearby? You can use this dashboard while connected directly to <span data-pet-name>Oishia</span>’s hotspot. It does not provide internet.</div></div>
+  <form id="wifiForm"><label for="ssid">Wi-Fi network name</label><input id="ssid" name="ssid" required maxlength="32" autocomplete="off" autocapitalize="none" spellcheck="false"><label for="wifiPassword">Wi-Fi password</label><input id="wifiPassword" name="password" type="password" maxlength="64" autocomplete="new-password"><small>Leave empty only for a network with no password.</small><br><button id="wifiSubmit" class="primary" type="submit">Connect <span data-pet-name>Oishia</span></button><p id="wifiNotice" class="notice" role="status" aria-live="polite"></p></form></div></details>
+  <details id="personalDetails" class="card network">
+    <summary>Names &amp; preferences</summary>
+    <p class="muted">Make your companion feel like yours. Changes are saved on the device.</p>
+    <form id="settingsForm">
+      <fieldset id="settingsFields" style="border:0;padding:0;margin:0;min-width:0">
+        <div class="network-content">
+          <div>
+            <label for="petName">Companion name</label><input id="petName" maxlength="12" required autocomplete="off" value="Oishia">
+            <label for="ownerName">Your name</label><input id="ownerName" maxlength="12" required autocomplete="off" value="Sathu">
+            <small>1–12 English letters, numbers, or punctuation. These names appear on the screen and in greetings.</small>
+            <label><input id="clockWhenAway" type="checkbox" checked style="width:auto;min-height:0"> Show clock when nobody is nearby</label>
+            <label for="clockAfterSeconds">No motion before clock (seconds)</label><input id="clockAfterSeconds" type="number" min="10" max="86400" step="1" required value="120">
+            <label><input id="clock24Hour" type="checkbox" checked style="width:auto;min-height:0"> Use 24-hour time</label>
+            <label><input id="clockShowSeconds" type="checkbox" checked style="width:auto;min-height:0"> Show seconds</label>
+            <label for="clockStyle">Clock layout</label><select id="clockStyle"><option value="0">Large clock</option><option value="1">Minimal clock</option><option value="2">Pet clock</option></select>
+            <label><input id="portraitEnabled" type="checkbox" checked style="width:auto;min-height:0"> Show detailed Oishia pet face</label>
+            <label for="soundProfile">Sound style</label><select id="soundProfile"><option value="0">Silent</option><option value="1">Gentle</option><option value="2">Playful</option></select>
+            <label><input id="autoSleep" type="checkbox" checked style="width:auto;min-height:0"> Automatic sleep</label>
+            <label for="sleepAfterSeconds">Darkness before sleep (seconds)</label><input id="sleepAfterSeconds" type="number" min="5" max="3600" step="1" required value="30">
+            <small>Turning automatic sleep off also disables occasional automatic naps. Manual sleep still works.</small>
+          </div>
+          <div>
+            <label for="timezone">World timezone</label>
+            <select id="timezone" required>
+              <optgroup label="Universal"><option value="UTC">UTC</option></optgroup>
+              <optgroup label="North America">
+                <option value="Pacific/Honolulu">Honolulu</option><option value="America/Anchorage">Anchorage</option><option value="America/Los_Angeles">Los Angeles / Vancouver</option><option value="America/Phoenix">Phoenix</option><option value="America/Denver">Denver</option><option value="America/Chicago">Chicago</option><option value="America/New_York">New York / Toronto</option><option value="America/Halifax">Halifax</option><option value="America/St_Johns">St. John's</option><option value="America/Mexico_City">Mexico City</option>
+              </optgroup>
+              <optgroup label="Central &amp; South America">
+                <option value="America/Bogota">Bogotá</option><option value="America/Lima">Lima</option><option value="America/Caracas">Caracas</option><option value="America/Santiago">Santiago</option><option value="America/Sao_Paulo">São Paulo</option><option value="America/Argentina/Buenos_Aires">Buenos Aires</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="Atlantic/Reykjavik">Reykjavík</option><option value="Europe/London">London</option><option value="Europe/Paris">Paris / Madrid</option><option value="Europe/Berlin">Berlin / Amsterdam</option><option value="Europe/Rome">Rome</option><option value="Europe/Helsinki">Helsinki</option><option value="Europe/Istanbul">Istanbul</option><option value="Europe/Moscow">Moscow</option>
+              </optgroup>
+              <optgroup label="Africa">
+                <option value="Africa/Casablanca">Casablanca</option><option value="Africa/Cairo">Cairo</option><option value="Africa/Johannesburg">Johannesburg</option><option value="Africa/Lagos">Lagos</option><option value="Africa/Nairobi">Nairobi</option>
+              </optgroup>
+              <optgroup label="Asia">
+                <option value="Asia/Dubai">Dubai</option><option value="Asia/Karachi">Karachi</option><option value="Asia/Kolkata">India (Kolkata)</option><option value="Asia/Kathmandu">Kathmandu</option><option value="Asia/Dhaka">Dhaka</option><option value="Asia/Yangon">Yangon</option><option value="Asia/Bangkok">Bangkok</option><option value="Asia/Jakarta">Jakarta</option><option value="Asia/Singapore">Singapore</option><option value="Asia/Manila">Manila</option><option value="Asia/Shanghai">China (Shanghai)</option><option value="Asia/Hong_Kong">Hong Kong</option><option value="Asia/Taipei">Taipei</option><option value="Asia/Seoul">Seoul</option><option value="Asia/Tokyo" selected>Tokyo</option>
+              </optgroup>
+              <optgroup label="Australia &amp; Pacific">
+                <option value="Australia/Perth">Perth</option><option value="Australia/Darwin">Darwin</option><option value="Australia/Adelaide">Adelaide</option><option value="Australia/Brisbane">Brisbane</option><option value="Australia/Sydney">Sydney / Melbourne</option><option value="Pacific/Guam">Guam</option><option value="Pacific/Noumea">Nouméa</option><option value="Pacific/Fiji">Fiji</option><option value="Pacific/Auckland">Auckland</option><option value="Pacific/Chatham">Chatham Islands</option><option value="Pacific/Apia">Apia</option>
+              </optgroup>
+            </select>
+            <div class="network-tools"><button id="detectTimezone" type="button">Use this device's zone</button><button id="previewClock" type="button">Preview clock for 30 seconds</button></div>
+            <small id="timeStatus">Time will sync from NTP after home Wi-Fi connects.</small>
+            <label for="motionCooldownSeconds">Time between motion greetings (seconds)</label><input id="motionCooldownSeconds" type="number" min="1" max="300" step="1" required value="10">
+            <label for="pirStuckSeconds">PIR stuck-HIGH warning (seconds)</label><input id="pirStuckSeconds" type="number" min="60" max="3600" step="1" required value="300">
+            <label><input id="tiltInvert" type="checkbox" style="width:auto;min-height:0"> Reverse tilt game direction</label>
+            <label for="darkThreshold">Dark below light level</label><input id="darkThreshold" type="number" min="0" max="4094" step="1" required value="800">
+            <label for="brightThreshold">Bright above light level</label><input id="brightThreshold" type="number" min="1" max="4095" step="1" required value="1100">
+            <small>Use the live light reading above. Bright must be higher than dark to avoid flickering between states.</small>
+            <label for="comfortableMinC">Comfort temperature minimum °C</label><input id="comfortableMinC" type="number" min="-10" max="59" step="0.1" required value="18">
+            <label for="comfortableMaxC">Comfort temperature maximum °C</label><input id="comfortableMaxC" type="number" min="-9" max="60" step="0.1" required value="29">
+            <div class="weekday-row"><div><label for="comfortableMinHumidity">Minimum humidity %</label><input id="comfortableMinHumidity" type="number" min="0" max="95" value="30"></div><div><label for="comfortableMaxHumidity">Maximum humidity %</label><input id="comfortableMaxHumidity" type="number" min="1" max="100" value="78"></div></div>
+            <div class="weekday-row"><div><label for="displayDayContrast">Day contrast</label><input id="displayDayContrast" type="number" min="5" max="255" value="180"></div><div><label for="displayNightContrast">Night contrast</label><input id="displayNightContrast" type="number" min="1" max="255" value="35"></div></div>
+            <label><input id="quietHoursEnabled" type="checkbox" style="width:auto;min-height:0"> Quiet hours (mute automatic sounds)</label>
+            <div class="weekday-row"><div><label for="quietStart">Starts</label><input id="quietStart" type="time" value="22:00"></div><div><label for="quietEnd">Ends</label><input id="quietEnd" type="time" value="07:00"></div></div>
+            <label><input id="displayOffQuiet" type="checkbox" style="width:auto;min-height:0"> Turn OLED off after one quiet minute</label>
+          </div>
+        </div>
+        <h2>Daily routines</h2><p class="muted">Up to three local-time actions. Routines wait until the clock is synchronized.</p>
+        <div id="routineGrid" class="routine-grid"></div>
+        <div class="network-tools"><button id="settingsSave" class="primary" type="submit">Save preferences</button><button id="settingsDefaults" type="button">Restore defaults</button><button id="settingsCancel" type="button">Discard edits</button></div>
+      </fieldset>
+      <p id="settingsNotice" class="notice" role="status" aria-live="polite"></p>
+    </form>
+    <div class="network-tools"><button id="exportSettings" type="button">Export backup</button><button id="importSettings" type="button">Import backup</button><input id="importFile" type="file" accept="application/json" hidden></div>
+    <small>The backup contains companion preferences and routines. It excludes Wi-Fi passwords, PINs, and friendship history.</small>
+  </details>
+  <details id="historyDetails" class="card network"><summary>History, activity &amp; device health</summary>
+    <div class="network-tools"><button id="loadHistory" type="button">Refresh history</button><button id="clearEvents" type="button">Clear activity</button></div>
+    <h2>Last hour</h2><p id="historySummary" class="muted">Open this section to load sensor history.</p><div id="historyChart" class="history-bars" aria-label="Temperature history"></div>
+    <h2>Recent activity</h2><ol id="eventList" class="event-list"><li>No events loaded.</li></ol>
+    <h2>Device health</h2><div id="healthGrid" class="health-grid"></div>
+  </details>
+  <footer class="footer"><span><span class="heart">♡</span> <span data-pet-name>Oishia</span> + <span data-owner-name>Sathu</span> · <span id="memories">Growing together</span></span><button id="lockButton">Lock dashboard</button></footer>
+</main>
+</div>
+<script src="dashboard-ble.js"></script>
+<script src="dashboard-face.js"></script>
+<script>
+(()=>{
+  'use strict';
+  const $=id=>document.getElementById(id);
+  let savedSettings=null, defaultSettings=null, settingsDirty=false, settingsSubmitting=false;
+  let key='', online=false, busy=false, wifiBusy=false, pollTimer, polling=false, firstStatus=true, generation=0, transport='wifi', bluetooth=null, scanTimer, scanning=false, wifiSubmitting=false, lastBrowserTimeAt=0;
+  const actionNames=['Reminder','Greeting','Sleep','Wake','Show clock'];
+  $('routineGrid').innerHTML=[0,1,2].map(i=>`<section class="routine"><h3>Routine ${i+1}</h3><label><input id="routine${i}Enabled" type="checkbox" style="width:auto;min-height:0"> Enabled</label><label for="routine${i}Time">Time</label><input id="routine${i}Time" type="time" value="08:00"><label for="routine${i}Action">Action</label><select id="routine${i}Action">${actionNames.map((name,value)=>`<option value="${value}">${name}</option>`).join('')}</select><label for="routine${i}Days">Days</label><select id="routine${i}Days"><option value="127">Every day</option><option value="62">Weekdays</option><option value="65">Weekends</option></select><label for="routine${i}Message">Screen message</label><input id="routine${i}Message" maxlength="21" value="Good morning!" required></section>`).join('');
+  try{key=sessionStorage.getItem('oishiaKey')||'';transport=sessionStorage.getItem('oishiaTransport')||'wifi';}catch{}
+  const notice=(id,message,error=false)=>{ $(id).textContent=message; $(id).classList.toggle('error',error); };
+  function remember(value){try{if(value){sessionStorage.setItem('oishiaKey',value);sessionStorage.setItem('oishiaTransport',transport);}else sessionStorage.removeItem('oishiaKey');}catch{}}
+  function controls(){$('settingsFields').disabled=!online||settingsSubmitting||!savedSettings;$('previewClock').disabled=!online||busy;document.querySelectorAll('[data-action],#messageForm button').forEach(button=>button.disabled=!online||busy);$('wifiSubmit').disabled=!online||wifiBusy||wifiSubmitting||scanning;$('scanButton').disabled=!online||wifiBusy||scanning;$('forgetButton').disabled=!online||wifiBusy||scanning;}
+  function lock(message=''){
+    generation++;savedSettings=null;defaultSettings=null;settingsDirty=false;lastBrowserTimeAt=0;key='';remember('');online=false;clearTimeout(pollTimer);clearTimeout(scanTimer);scanning=false;$('petFace').getContext('2d').clearRect(0,0,128,64);if(bluetooth){const old=bluetooth;bluetooth=null;old.onDisconnect=null;old.disconnect();}$('dashboard').hidden=true;$('loginPanel').hidden=false;
+    $('connectionBadge').textContent='Your little companion';$('connectionBadge').classList.add('offline');notice('loginNotice',message,!!message);controls();
+  }
+  async function api(path,body){
+    if(transport==='ble'){if(!bluetooth)throw new Error('Reconnect Bluetooth.');return bluetooth.request(path,body,key);}
+    const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),6000);
+    try{
+      const response=await fetch(path,{method:body?'POST':'GET',headers:{'X-Oishia-Key':key,...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,cache:'no-store',signal:controller.signal});
+      const result=await response.json();
+      if(!response.ok){const error=new Error(result.error||'Oishia could not complete that request.');error.status=response.status;throw error;}
+      return result;
+    }finally{clearTimeout(timer);}
+  }
+
+  function render(data){
+    const p=data.pet,n=data.network;
+    if(data.settings){savedSettings=data.settings;defaultSettings=data.settingsDefaults;renderNames(savedSettings);if(!settingsDirty&&!settingsSubmitting)fillSettings(savedSettings);}
+    online=true;$('loginPanel').hidden=true;$('dashboard').hidden=false;$('connectionWarning').hidden=true;
+    $('connectionBadge').textContent=transport==='ble'?'Together on Bluetooth':n.connected?'Together on home Wi-Fi':'Together on Oishia’s hotspot';$('connectionBadge').classList.remove('offline');
+    $('petMessage').textContent=p.message||'Happy you’re here.';
+    $('petMood').textContent=(p.mood||'idle').toLowerCase().replaceAll('_',' ');
+    drawOishiaFace($('petFace'),p.sleeping?'SLEEP':p.mood,savedSettings?.portraitEnabled!==false);
+    $('friendship').textContent='Friendship level '+p.friendship;$('happiness').textContent=p.happiness+'%';$('happinessBar').value=p.happiness;
+    $('temperature').textContent=p.temperature==null?'—':Number(p.temperature).toFixed(1)+'°C';
+    $('humidity').textContent=p.humidity==null?'—':Math.round(p.humidity)+'%';
+    $('light').textContent=p.light==null?'—':p.dark?'Cozy':'Bright';$('lightDetail').textContent=p.light==null?'Sensor unavailable':'Light level '+p.light;
+    $('motion').textContent=p.pirWarming?'Warming':p.pirStuck?'Check PIR':p.motion==null?'—':p.motion?'Detected':'Quiet';
+    if(data.time){const source=data.time.source==='dashboard'?'dashboard clock':'NTP';const sync=data.time.synced?'Time ready from '+source+' · '+data.time.local+' · '+data.time.timezone:'Waiting for NTP; trying this dashboard clock.';const clock=p.clockVisible?'Clock is on the OLED.':p.motion?'Motion is detected; the away timer starts when it clears.':savedSettings?.clockWhenAway?'Clock in about '+Math.max(0,savedSettings.clockAfterSeconds-(p.presenceQuietSeconds||0))+' seconds if the room stays quiet.':'Away clock is disabled.';$('timeStatus').textContent=sync+' '+clock;if(!data.time.synced&&Date.now()-lastBrowserTimeAt>=30000){lastBrowserTimeAt=Date.now();const currentGeneration=generation;api('/api/command',{action:'set_time',epoch:Math.floor(Date.now()/1000)}).catch(()=>{if(currentGeneration===generation)lastBrowserTimeAt=Date.now()-25000;});}}
+    $('readingStatus').textContent=p.memoryHealthy===false?'Memory unavailable · changes may not be saved':p.memoryPending?'Saving preferences soon…':p.tiltReady===false?'Tilt sensor reconnecting…':'Live · unavailable readings show —';$('memories').textContent=p.pets+' pets · '+p.visits+' visits';
+    $('muteButton').dataset.action=p.muted?'unmute':'mute';$('muteButton').textContent=p.muted?'Sound off · Unmute':'Sound on · Mute';$('muteButton').setAttribute('aria-pressed',String(p.muted));
+    $('wifiStatus').textContent=n.connected?'Connected to '+n.ssid:n.testing?'Trying your network…':n.connecting?'Reconnecting to home Wi-Fi…':'Using Oishia’s setup hotspot';
+    $('bluetoothStatus').textContent=n.bluetoothReady?'Bluetooth available as '+(n.bluetoothName||'Oishia-…')+(n.bluetoothConnected?' · connected':''):'Bluetooth is starting or unavailable';
+    const results={forgotten:'Saved Wi-Fi removed. Join Oishia’s hotspot or use Bluetooth to choose a new network.',idle:'',testing:'Trying your network. This may take about 20 seconds.',saved:'Connected! Join the same home Wi-Fi and open the address below. The setup hotspot closes after a short grace period.',failed:'Could not connect. Check the network name, password, and 2.4 GHz support. Your previous settings were kept.',storage_error:'Connected, but settings could not be saved. Your previous settings were kept. Restart Oishia and try again.'};
+    notice('wifiResult',results[n.settingsResult]||'', ['failed','storage_error'].includes(n.settingsResult));
+    if(!n.storageReady)notice('wifiResult','Settings storage is unavailable. Restart Oishia before saving Wi-Fi.',true);
+    const hasAddress=n.connected&&/^\d{1,3}(\.\d{1,3}){3}$/.test(n.ip);
+    $('dashboardAddress').hidden=!hasAddress;if(hasAddress){$('homeLink').href='http://'+n.ip+'/';$('homeLink').textContent='http://'+n.ip;}
+    if(firstStatus){$('wifiDetails').open=!n.connected;firstStatus=false;}
+    const health=[['Memory',p.memoryHealthy?'Ready':'Check'],['Tilt sensor',p.tiltReady?'Ready':'Reconnecting'],['Climate',p.temperature==null?'Unavailable':'Ready'],['PIR',p.pirWarming?'Warming up':p.pirStuck?'Stuck HIGH':'Ready'],['Clock',data.time?.synced?'Synchronized':'Waiting'],['Free heap',Math.round((data.device?.freeHeap||0)/1024)+' KB'],['Largest block',Math.round((data.device?.largestFreeBlock||0)/1024)+' KB'],['Loop maximum',(data.device?.maxLoopMicros||0)+' µs'],['Firmware',data.device?.firmware||'—']];
+    $('healthGrid').replaceChildren(...health.map(([name,value])=>{const item=document.createElement('div');item.className='health-item';const title=document.createElement('strong');title.textContent=name;item.append(title,document.createTextNode(value));return item;}));
+    wifiBusy=!!n.testing;controls();
+  }
+  const settingsKeys=['petName','ownerName','clockWhenAway','clockAfterSeconds','clock24Hour','clockShowSeconds','clockStyle','portraitEnabled','soundProfile','timezone','autoSleep','tiltInvert','sleepAfterSeconds','motionCooldownSeconds','pirStuckSeconds','darkThreshold','brightThreshold','comfortableMinHumidity','comfortableMaxHumidity','displayDayContrast','displayNightContrast','quietHoursEnabled','displayOffQuiet'];
+  function renderNames(settings){
+    document.querySelectorAll('[data-pet-name]').forEach(el=>el.textContent=settings.petName);
+    document.querySelectorAll('[data-owner-name]').forEach(el=>el.textContent=settings.ownerName);
+    document.title=settings.petName+' · A little closer';
+  }
+  function fillSettings(settings){
+    for(const name of settingsKeys){const el=$(name);if(el.type==='checkbox')el.checked=!!settings[name];else el.value=settings[name];}
+    $('comfortableMinC').value=(settings.comfortableMinTenths/10).toFixed(1);$('comfortableMaxC').value=(settings.comfortableMaxTenths/10).toFixed(1);
+    $('quietStart').value=String(settings.quietStartHour).padStart(2,'0')+':'+String(settings.quietStartMinute).padStart(2,'0');$('quietEnd').value=String(settings.quietEndHour).padStart(2,'0')+':'+String(settings.quietEndMinute).padStart(2,'0');
+    (settings.routines||[]).forEach((routine,i)=>{if(i>2)return;$(`routine${i}Enabled`).checked=!!routine.enabled;$(`routine${i}Action`).value=routine.action;$(`routine${i}Time`).value=String(routine.hour).padStart(2,'0')+':'+String(routine.minute).padStart(2,'0');$(`routine${i}Days`).value=routine.weekdays;$(`routine${i}Message`).value=routine.message;});
+  }
+  function collectSettings(){
+    const values={};for(const name of settingsKeys){const el=$(name);values[name]=el.type==='checkbox'?el.checked:el.type==='number'||el.tagName==='SELECT'&&/^(clockStyle|soundProfile)$/.test(name)?Number(el.value):el.value;}
+    values.comfortableMinTenths=Math.round(Number($('comfortableMinC').value)*10);values.comfortableMaxTenths=Math.round(Number($('comfortableMaxC').value)*10);
+    [values.quietStartHour,values.quietStartMinute]=$('quietStart').value.split(':').map(Number);[values.quietEndHour,values.quietEndMinute]=$('quietEnd').value.split(':').map(Number);
+    values.routines=[0,1,2].map(i=>{const [hour,minute]=$(`routine${i}Time`).value.split(':').map(Number);return{enabled:$(`routine${i}Enabled`).checked,action:Number($(`routine${i}Action`).value),hour,minute,weekdays:Number($(`routine${i}Days`).value),message:$(`routine${i}Message`).value};});
+    return values;
+  }
+  $('detectTimezone').addEventListener('click',()=>{
+    const zone=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if([...$('timezone').options].some(option=>option.value===zone)){$('timezone').value=zone;settingsDirty=true;notice('settingsNotice','Timezone selected from this device. Save preferences to apply.');}
+    else notice('settingsNotice','This device timezone is not in the compact list. Choose the closest city.',true);
+  });
+  $('previewClock').addEventListener('click',async()=>{if(await command('clock'))notice('settingsNotice','Clock preview sent. Check the OLED for the next 30 seconds.');});
+  $('settingsForm').addEventListener('input',()=>{settingsDirty=true;notice('settingsNotice','Unsaved changes.');});
+  $('settingsDefaults').addEventListener('click',()=>{if(!defaultSettings)return;fillSettings(defaultSettings);settingsDirty=true;notice('settingsNotice','Defaults filled in. Save preferences to apply.');});
+  $('settingsCancel').addEventListener('click',()=>{if(!savedSettings)return;fillSettings(savedSettings);settingsDirty=false;notice('settingsNotice','Edits discarded.');});
+  $('settingsForm').addEventListener('submit',async event=>{
+    event.preventDefault();if(settingsSubmitting||!online)return;
+    const values=collectSettings();
+    if(![values.petName,values.ownerName].every(name=>/^[\x20-\x7e]{1,12}$/.test(name)&&name.trim()===name)){notice('settingsNotice','Names need 1–12 printable English characters without leading or trailing spaces.',true);return;}
+    if(values.brightThreshold<=values.darkThreshold){notice('settingsNotice','Bright must be higher than dark.',true);return;}
+    if(values.comfortableMinTenths>=values.comfortableMaxTenths||values.comfortableMinHumidity>=values.comfortableMaxHumidity){notice('settingsNotice','Comfort maximums must be higher than minimums.',true);return;}
+    if(values.routines.some(r=>!/^[\x20-\x7e]{1,21}$/.test(r.message)||r.message.trim()!==r.message)){notice('settingsNotice','Routine messages need 1–21 printable English characters without outside spaces.',true);return;}
+    settingsSubmitting=true;controls();const currentGeneration=generation;
+    notice('settingsNotice','Saving preferences…');
+    try{const result=await api('/api/settings',values);if(currentGeneration!==generation)return;savedSettings=result.settings;settingsDirty=false;fillSettings(savedSettings);renderNames(savedSettings);notice('settingsNotice','Preferences saved on your device.');}
+    catch(error){if(currentGeneration!==generation)return;if(error.status===401)lock(error.message);else notice('settingsNotice',error.status?error.message:'Connection interrupted. Check the saved preferences before trying again.',true);}
+    finally{settingsSubmitting=false;controls();}
+  });
+  $('exportSettings').addEventListener('click',()=>{
+    if(!savedSettings)return;const data=JSON.stringify({format:'oishia-settings',version:1,settings:savedSettings},null,2),url=URL.createObjectURL(new Blob([data],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download=(savedSettings.petName||'oishia')+'-settings.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),0);notice('settingsNotice','Backup downloaded.');
+  });
+  $('importSettings').addEventListener('click',()=>{$('importFile').value='';$('importFile').click();});
+  $('importFile').addEventListener('change',async()=>{
+    try{const parsed=JSON.parse(await $('importFile').files[0].text());if(parsed.format!=='oishia-settings'||parsed.version!==1||!parsed.settings||!Array.isArray(parsed.settings.routines)||parsed.settings.routines.length!==3)throw new Error();fillSettings(parsed.settings);settingsDirty=true;notice('settingsNotice','Backup loaded into the form. Review it, then Save preferences.');$('personalDetails').open=true;}
+    catch{notice('settingsNotice','That file is not a valid Oishia settings backup.',true);}
+  });
+  async function loadHistory(){
+    $('loadHistory').disabled=true;
+    try{
+      const [history,events]=await Promise.all([api('/api/history'),api('/api/events')]);
+      const temperatures=(history.temperature||[]).filter(value=>value!=null),humidities=(history.humidity||[]).filter(value=>value!=null),lights=(history.light||[]).filter(value=>value!=null);
+      if(!temperatures.length){$('historySummary').textContent='No complete climate samples yet. Oishia records one sample each minute.';$('historyChart').replaceChildren();}
+      else{const low=Math.min(...temperatures),high=Math.max(...temperatures),span=Math.max(1,high-low);$('historySummary').textContent=`${temperatures.length} samples · ${low.toFixed(1)}–${high.toFixed(1)}°C · latest humidity ${humidities.at(-1)??'—'}% · light ${lights.at(-1)??'—'}`;$('historyChart').replaceChildren(...temperatures.map(value=>{const bar=document.createElement('i');bar.style.height=(18+(value-low)/span*82)+'%';bar.title=value.toFixed(1)+'°C';return bar;}));}
+      $('eventList').replaceChildren(...(events.events?.length?events.events.slice().reverse().map(event=>{const item=document.createElement('li'),when=event.epoch?new Date(event.epoch*1000).toLocaleString():'uptime '+event.uptimeSeconds+'s';item.textContent=when+' · '+event.text;return item;}):[Object.assign(document.createElement('li'),{textContent:'No recent events.'})]));
+    }catch(error){if(error.status===401)lock(error.message);else $('historySummary').textContent='Could not load history: '+error.message;}
+    finally{$('loadHistory').disabled=false;}
+  }
+  $('loadHistory').addEventListener('click',loadHistory);$('historyDetails').addEventListener('toggle',()=>{if($('historyDetails').open)loadHistory();},{once:true});
+  $('clearEvents').addEventListener('click',async()=>{if(!online)return;$('clearEvents').disabled=true;try{await api('/api/command',{action:'clear_events'});$('eventList').replaceChildren(Object.assign(document.createElement('li'),{textContent:'No recent events.'}));}catch(error){if(error.status===401)lock(error.message);else $('historySummary').textContent='Could not clear activity: '+error.message;}finally{$('clearEvents').disabled=false;}});
+  async function poll(){
+    if(!key||polling||document.hidden||(transport==='ble'&&!bluetooth?.device?.gatt.connected))return;
+    polling=true;const currentGeneration=generation;
+    try{const data=await api('/api/status');if(currentGeneration===generation)render(data);}
+    catch(error){if(currentGeneration!==generation)return;if(error.status===401){lock(error.message);return;}online=false;$('connectionBadge').textContent='Reconnecting…';$('connectionBadge').classList.add('offline');$('connectionWarning').hidden=false;$('connectionWarningText').textContent=transport==='ble'?'Bluetooth disconnected. Oishia keeps running. Reconnect to continue.':'Connection paused. Oishia is still doing its thing. Trying again…';$('reconnectBle').hidden=transport!=='ble';controls();}
+    finally{polling=false;if(key&&currentGeneration===generation&&(transport!=='ble'||bluetooth?.device?.gatt.connected))pollTimer=setTimeout(poll,online?2000:4000);}
+  }
+  $('loginForm').addEventListener('submit',async event=>{
+    event.preventDefault();const button=event.submitter;button.disabled=true;let previousToken='';try{previousToken=sessionStorage.getItem('oishiaKey')||'';}catch{}key=$('accessKey').value.trim().toLowerCase();generation++;firstStatus=true;
+    transport=document.querySelector('input[name=transport]:checked').value;
+    notice('loginNotice',transport==='ble'?'Choose Oishia and enter the six-digit BLE pairing code from its screen…':'Saying hello…');
+    try{if(transport==='ble')await connectBluetooth();const login=await api('/api/auth',{replace:previousToken});key=login.token;remember(key);render(await api('/api/status'));$('accessKey').value='';notice('loginNotice','');clearTimeout(pollTimer);pollTimer=setTimeout(poll,2000);}
+    catch(error){key='';if(bluetooth){bluetooth.onDisconnect=null;bluetooth.disconnect();bluetooth=null;}notice('loginNotice',transport==='ble'||error.status?error.message:'Could not reach Oishia. Join Oishia’s network and try again.',true);}
+    finally{button.disabled=false;}
+  });
+  async function command(action,text){
+    if(busy||!online)return false;busy=true;controls();notice('actionNotice','Sending…');
+    try{await api('/api/command',{action,...(text!==undefined?{text}:{})});notice('actionNotice',({love:'A little love is on its way ♡',sleep:'Cozy time. Oishia will sleep until you wake it.',wake:'Good morning, Oishia!',message:'Your note is on its way.',mute:'Quiet time.',unmute:'Sound is back on.',clock:'Clock preview is on the OLED.'})[action]);return true;}
+    catch(error){if(error.status===401)lock(error.message);else notice('actionNotice',error.status?error.message:'Connection interrupted. The command may have arrived; check Oishia before trying again.',true);return false;}
+    finally{busy=false;controls();}
+  }
+  document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>command(button.dataset.action)));
+  $('message').addEventListener('input',()=>{$('messageCount').textContent=$('message').value.length+' / 21';});
+  $('messageForm').addEventListener('submit',async event=>{
+    event.preventDefault();const text=$('message').value;
+    if(!/^[\x20-\x7e]{1,21}$/.test(text)||!text.trim()){notice('actionNotice','Use 1–21 English letters, numbers, or punctuation.',true);return;}
+    if(await command('message',text)){if($('message').value===text){$('message').value='';$('messageCount').textContent='0 / 21';}}
+  });
+  $('wifiForm').addEventListener('submit',async event=>{
+    event.preventDefault();if(wifiBusy||wifiSubmitting)return;
+    const ssid=$('ssid').value,password=$('wifiPassword').value, length=new TextEncoder().encode(ssid).length;
+    if(length<1||length>32||/[\x00-\x1f\x7f]/.test(ssid)){notice('wifiNotice','Use a network name of 1–32 bytes without control characters.',true);return;}
+    if(password!==''&&!/^[\x20-\x7e]{8,63}$/.test(password)&&!/^([a-fA-F0-9]{64})$/.test(password)){notice('wifiNotice','Use an 8–63 character password, or leave it empty for an open network.',true);return;}
+    wifiSubmitting=true;controls();notice('wifiNotice','Sending settings…');
+    try{await api('/api/wifi',{ssid,password});wifiBusy=true;$('wifiPassword').value='';notice('wifiNotice','Trying Wi-Fi. If this page disconnects, rejoin Oishia’s hotspot to see the result.');}
+    catch(error){wifiBusy=false;if(error.status===401)lock(error.message);else notice('wifiNotice',error.status?error.message:'Connection changed. Rejoin Oishia’s hotspot and check the result before retrying.',true);}
+    finally{wifiSubmitting=false;controls();}
+  });
+  async function connectBluetooth(){
+    if(bluetooth){bluetooth.onDisconnect=null;bluetooth.disconnect();}
+    bluetooth=new OishiaBluetoothTransport(()=>{
+      online=false;clearTimeout(pollTimer);clearTimeout(scanTimer);scanning=false;
+      $('connectionBadge').textContent='Bluetooth disconnected';$('connectionBadge').classList.add('offline');
+      $('connectionWarning').hidden=false;$('connectionWarningText').textContent='Bluetooth disconnected. Oishia keeps running. Reconnect to continue.';$('reconnectBle').hidden=false;controls();
+    });
+    await bluetooth.connect();
+  }
+  $('reconnectBle').addEventListener('click',async()=>{
+    $('reconnectBle').disabled=true;
+    try{await connectBluetooth();clearTimeout(pollTimer);await poll();}
+    catch(error){$('connectionWarningText').textContent=error.message;}
+    finally{$('reconnectBle').disabled=false;}
+  });
+  function transportHint(){
+    const choice=document.querySelector('input[name=transport]:checked').value;
+    $('transportHint').textContent=choice==='ble'?(window.isSecureContext&&navigator.bluetooth?'Choose Oishia and enter its six-digit BLE pairing code when asked.':'Bluetooth requires a supported browser on HTTPS or localhost. Use the local Bluetooth controller described in the setup guide.'):'Connect to the same Wi-Fi network as Oishia.';
+  }
+  document.querySelectorAll('input[name=transport]').forEach(input=>input.addEventListener('change',transportHint));transportHint();
+  async function scanNetworks(){
+    const currentGeneration=generation;
+    try{
+      const result=await api('/api/networks');if(currentGeneration!==generation)return;
+      if(result.scanning){notice('networkNotice','Looking for nearby 2.4 GHz networks…');scanTimer=setTimeout(scanNetworks,1800);return;}
+      $('networkList').replaceChildren();
+      for(const network of result.networks||[]){const button=document.createElement('button');button.type='button';button.textContent=network.ssid+' · '+network.rssi+' dBm'+(network.open?' · open':'');button.addEventListener('click',()=>{$('ssid').value=network.ssid;});$('networkList').append(button);}
+      notice('networkNotice',result.networks?.length?'Choose a network, or type its name.':'No networks found. You can enter a hidden network manually.');
+    }catch(error){if(error.status===401)lock(error.message);else notice('networkNotice',error.message,true);}
+    scanning=false;controls();
+  }
+  $('scanButton').addEventListener('click',()=>{if(scanning||!online)return;scanning=true;controls();scanNetworks();});
+  $('forgetButton').addEventListener('click',()=>{$('forgetConfirmation').hidden=false;});
+  $('cancelForget').addEventListener('click',()=>{$('forgetConfirmation').hidden=true;});
+  $('confirmForget').addEventListener('click',async()=>{
+    $('confirmForget').disabled=true;
+    try{const response=await api('/api/wifi/forget',{confirm:'forget-wifi'});notice('networkNotice',response.message);$('forgetConfirmation').hidden=true;}
+    catch(error){if(error.status===401)lock(error.message);else notice('networkNotice',error.message,true);}
+    finally{$('confirmForget').disabled=false;}
+  });
+  $('lockButton').addEventListener('click',async()=>{try{if(key)await api('/api/logout',{});}catch{}finally{lock();}});
+  document.addEventListener('visibilitychange',()=>{clearTimeout(pollTimer);if(!document.hidden)poll();});
+  if(transport==='ble'||['localhost','127.0.0.1','::1'].includes(location.hostname)){
+    document.querySelector('input[value=ble]').checked=true;transport='ble';key='';transportHint();
+  }
+  controls();if(key)poll();
+})();
+</script>
+</body>
+</html>
